@@ -1,4 +1,6 @@
 package InMemoryModel;
+import ModelElements.*;
+
 
 public class ModelStore implements IModelChanger {
 public PoligonalModel models;
@@ -10,7 +12,7 @@ private IModelChangeObserver changeObserver;
 public ModelStore(IModelChangeObserver changeObserver) {
     this.changeObserver = changeObserver;
 
-    this.models = new PoligonalModel(new Poligone());
+    this.models = new PoligonalModel(new Poligon());
     this.flashes = new Flash();
     this.cameras = new Camera();
 
@@ -23,5 +25,5 @@ public Scene getScene(int n) {
 
 @Override
 public void notifyChange(IModelChanger sender) {
-}
+ }
 }
